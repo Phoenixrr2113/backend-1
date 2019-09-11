@@ -9,12 +9,12 @@ const Users = require("../models/user-model");
 
 //need to generate password, user and ERRORS AS WELL AS LOGIN
 
-// router.post("api/register", (req, res) => {
-//     const user = req.body;
+router.post("api/register", (req, res) => {
+    const user = req.body;
 
-//     if(!user.username || !user.password) {
-//         res.status(400).json({errorMessage: "Please provide correct login info."});
-//     } else {
+    if(!user.username || !user.password) {
+        res.status(400).json({errorMessage: "Please provide correct login info."});
+    } else {
 
-//     }
-// } )
+    }
+} )
