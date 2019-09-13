@@ -21,6 +21,7 @@ function generateToken(models) {
     };
     return jwt.sign(payload, hidden, options);
 }
+
 //Expired Login info
 
 function restrict(req, res, next) {
