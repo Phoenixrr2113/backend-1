@@ -1,13 +1,15 @@
 const express = require("express");
-const questionsRouter = require("../questions/questions-router.js");
+//listening on 5000
+const port = 5000;
 
 const server = express();
 
 server.use(express.json());
-server.use("/api/questions", questionsRouter);
-
+//outputs the WELCOME
 server.get("/", (req, res) => {
-  res.send("Welcome to Advice Giver!");
+    res.send("Welcome to Advice Giver!");
 });
-
-module.exports = server;
+//Makes sure we are listening
+server.listen(5000, () => {
+    console.log("Server listening on port ${port}");
+});
