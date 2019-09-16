@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const createToken = require("../token/tokenCoin"),createToken;
 const Users = require("../models/user-model");
 
-//Still need to figure out rest router
+
 
 //need to generate password, user and ERRORS AS WELL AS LOGIN
 
@@ -66,5 +66,26 @@ router.post("/api/login", (req, res) => {
         });
     }
 });
+//doesnt work
+// router.delete('/:id', (req, res) => {
+//     const id = req.params.id;
+//     actionsDB
+//         .remove(id)
+//         .then(count => {
+//             if(count) {
+//                 res.json({ message: "Action successfully deleted"})
+//             }
+//             else {
+//                 res
+//                     .status(404)
+//                     .json({ error: "Action at specified ID could not be found "})
+//             }
+//         })
+//         .catch(err => {
+//             res
+//                 .status(500)
+//                 .json({ error: "Failed to delete action"})
+//         })
+// })
 
 module.exports = router;
